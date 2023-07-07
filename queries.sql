@@ -62,4 +62,4 @@ WHERE salary > (%s)
 SELECT vacancies.title as vacancy, employers.name as employer, vacancies.salary, vacancies.link
 FROM vacancies
 INNER JOIN employers ON vacancies.employer_id = employers.employer_id
-WHERE salary > (%s)
+WHERE vacancies.title LIKE(%s)
